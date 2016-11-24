@@ -48,10 +48,13 @@ Temporary Items
 
 # VS + NTVS
 .ntvs_analysis.dat
+*.suo
 bin
 
-#custom
+# Custom
 generated_vouchers
 node_modules
 obj
 config/secrets.js
+public/images/merchants
+public/images/offers
