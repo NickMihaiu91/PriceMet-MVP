@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="voucherGenerateApp">
+<head>
+    <meta charset="utf-8" />
+    <title>PriceMet voucher</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,300,700,800' rel='stylesheet' type='text/css' media="all">
+    <link href="css/voucher-generate.css" rel="stylesheet" media="all" />
+
+</head>
+<body>
+    <div class="container" ng-controller="VoucherGenerateCtrl">
+        <div class="panel with-nav-tabs panel-default" style="border:none;">
+            <div class="panel-body">
+                <div class="tab-content">
+                    <div class="tab-pane fade in active active-modified" id="tab1default">
+                        <div class="bor" style="margin:10px 0;"></div>
+                        <div class="clearfix"></div>
+                        <div class="row top-bottom-border">
+                            <div class="col-sm-6 col-xs-6 pull-left">
+                                <img src="images/Price-Met_Transp-Background.png" class="img-responsive logo" />
+                            </div>
+                            <div class="col-sm-6 col-xs-6 pull-right text-right">
+                                <h5>Voucher Number: <strong>{{ voucher.voucherNumber }}</strong></h5>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                        <div class="bor" style="margin:10px 0;"></div>
+                        <div class="col-sm-8">
+                            <div class="left-panel">
+                                <p>
+                                    <h3 class="fnt-for-media">
+                                        <strong>{{ voucher.offerTitle }}</strong><br />
+                                        C${{ voucher.totalPrice }} for {{ voucher.noOfPersons }} person(s)
+                                    </h3>
+                                    <h3 class="fnt-for-media">
+                                        <strong>Expires on:</strong><br />
+                                        {{ voucher.expiresAt | date : 'MMMM d, y' }}<br />
+                                    </h3>
+                                    <h3 class="fnt-for-media">
+                                        <strong>Redeemable after:</strong><br />
+                                        {{ voucher.redeemableAfter | date : 'MMMM d, y' }}<br />
+                                    </h3>
+                                    <h3 class="fnt-for-media no-bottom-margin"><strong>Fine Print:</strong></h3>
+                                    This Voucher is valid only for dine-in or carryout. Advance order required for carryout (1-hour Advanced Notice). Please call the restaurant directly.<br /><br />
+                                    <h2><strong>How to redeem this voucher:</strong></h2>
+                                    <ol>
+                                        <li>Print out your PriceMet voucher or just have it ready on your phone.</li>
+                                        <li>Show the voucher to the merchant.</li>
+                                        <li>Enjoy!</li>
+                                    </ol>
+                                    <br />
+                                    <h3><strong>Need PriceMet Support? </strong></h3>
+                                    <strong>Call: (604) 518-6248</strong>  <br /><br />
+                                    <span class="pull-left"><strong>Email: <a href="mailto:support@pricemet.ca">support@pricemet.ca</a></strong></span> <br /><br />
+                                    <div class="clearfix"></div><br />
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="right-panel">
+                                <div id="map_canvas">
+                                    <img ng-src="{{ voucher.offerImageUrl }}" class="img-responsive" height="200" width="400" imageonload="onImageLoaded()">
+                                    <br />
+                                </div>
+                                <br />
+                                <address>
+                                    <strong>{{ voucher.merchant.name }}</strong><br>
+                                    {{ voucher.merchant.address }}<br>
+                                    {{ voucher.merchant.city }}<br>
+                                    {{ voucher.merchant.province }}<br>
+                                    Canada<br>
+                                    {{ voucher.merchant.postalCode }}<br>
+                                    <abbr title="Phone" ng-show="voucher.merchant.phone">P:</abbr> {{ voucher.merchant.phone }}
+                                </address>
+                                <div class="clearfix"></div>
+                                <br />
+                                <div id="qrcode"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <small>
+                                    <strong>Legal stuff we're required to say:</strong>
+                                    General terms applicable to all PriceMet Vouchers (unless the Fine Print specifies an exception): This Voucher is not redeemable for cash. It does not cover tax or gratuity. The amount paid for this Voucher will never expire and may be applied toward any goods or services offered by the merchant if the original goods or services specified on the voucher are no longer available. If you have gone to the merchant and the merchant has refused to redeem the cash value of your expired Voucher, PriceMet will refund the purchase price of the Voucher. This Voucher can only be used for making purchases of goods/services at the named merchant. Merchant is solely responsible for Voucher redemption.  Neither PriceMet nor the named merchant shall be responsible for PriceMet Vouchers that are lost or damaged. Voucher is for promotional purposes.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.min.js"></script>
+
+    <script src="js/qrcode.min.js"></script>
+    <script type="text/javascript">
+        new QRCode(document.getElementById("qrcode"), "www.pricemet.ca/voucher-redeem" + window.location.search);
+    </script>
+
+    <script src="js/angular/services/voucher-service.js"></script>
+    <script src="js/angular/angular-voucher-generate.js"></script>
+
+</body>
+</html>

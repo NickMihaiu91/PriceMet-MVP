@@ -1,0 +1,53 @@
+﻿#ouibounce-modal.modal {
+    z-index: 99999!important;
+}
+
+#ouibounce-modal .modal-content {
+    font-family: gotham;
+}
+
+#ouibounce-modal .modal-header h3 {
+    text-transform:uppercase;
+}
+
+#ouibounce-modal .modal-body {
+    overflow-y: auto;
+}
+
+    #ouibounce-modal .modal-body .other-option-text-input-container {
+        padding-left: 25px;
+    }
+
+        #ouibounce-modal .modal-body .other-option-text-input-container .btn {
+            display: block;
+        }
+
+    #ouibounce-modal .modal-body .responses {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 18px;
+    }
+
+        #ouibounce-modal .modal-body .responses .radio {
+            margin-top: 15px;
+            background-color: #298DBA;
+            border-radius: 4px;
+            color: white;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+        }
+
+        #ouibounce-modal .modal-body .responses .radio:first-of-type {
+            margin-top: 0;
+        }
+
+            #ouibounce-modal .modal-body .responses .radio label {
+                width: 100%;
+            }
+
+#ouibounce-modal .modal-footer p {
+    cursor: pointer;
+}

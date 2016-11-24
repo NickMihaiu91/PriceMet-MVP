@@ -1,0 +1,183 @@
+﻿@font-face {
+    font-family: 'gotham';
+    src: url('../fonts/gotham/GothamLight.eot');
+    src: url('../fonts/gotham/GothamLight.eot?#iefix') format('embedded-opentype'), url('../fonts/gotham/GothamLight.woff') format('woff'), url('../fonts/gotham/GothamLight.ttf') format('truetype'), url('../fonts/gotham/GothamLight.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    width: 100%;
+    font-family: 'gotham';
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 350px; /* bottom = footer height */
+}
+
+header .logo {
+    width: 50%;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+header .navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    min-height: 70px;
+    font-family: gotham;
+}
+
+    header .navbar ul.navbar-nav {
+        margin-top: 10px;
+    }
+
+        header .navbar ul.navbar-nav li a {
+            font-size: 16px;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+
+            header .navbar ul.navbar-nav li a:hover, header .navbar ul.navbar-nav li a:focus {
+                background-color: rgba(96, 133, 181, 0.5);
+            }
+
+.first-section > .container {
+    margin-top: 100px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid black;
+}
+
+.buffer-top-20 {
+    margin-top: 20px;
+}
+
+.box {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #cfcfcf;
+    -moz-box-shadow: 2px 2px 4px 0px #cfcfcf;
+    -webkit-box-shadow: 2px 2px 4px 0px #cfcfcf;
+    -o-box-shadow: 2px 2px 4px 0px #cfcfcf;
+    box-shadow: 2px 2px 4px 0px #cfcfcf;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=134, Strength=4);
+}
+
+.clear-both {
+    clear: both;
+}
+
+.btn-success {
+    background: #65AF68;
+    -moz-transition-property: background-color, color;
+    -o-transition-property: background-color, color;
+    -webkit-transition-property: background-color, color;
+    transition-property: background-color, color;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+    .btn-success:hover {
+        background: rgba(101, 175, 104, 0.9);
+    }
+
+/* Footer */
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 350px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+    footer .link-container {
+        margin-top: 30px;
+    }
+
+        footer .link-container ul {
+            list-style: none outside none;
+            padding-left: 0;
+            color: white;
+        }
+
+            footer .link-container ul a {
+                color: white;
+                cursor: pointer;
+            }
+
+    footer .social h4 {
+        font-weight: 600;
+    }
+
+    footer p {
+        text-align: center;
+        font-size: 17px;
+        margin: 10px auto;
+    }
+
+    footer .footer-divider {
+        width: 50%;
+    }
+
+@media screen and (max-width: 1000px) {
+    header .logo {
+        width: auto;
+        height: 45px;
+        margin-top: -10px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    input[type="text"], input[type="number"], input[type="email"], textarea, select {
+        font-size: 16px !important;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    header .logo {
+        width: auto;
+        height: 45px;
+        margin-top: -10px;
+    }
+
+    header .navbar {
+        min-height: 60px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+        header .navbar .navbar-collapse {
+            background-color: rgba(0, 0, 0, 0.55);
+        }
+
+        header .navbar .navbar-toggle {
+            background-color: #B3AEAE;
+            margin-top: 10px;
+        }
+
+            header .navbar .navbar-toggle .icon-bar {
+                background-color: rgb(41, 84, 126);
+            }
+
+    .first-section > .container {
+        margin-top: 70px;
+    }
+}

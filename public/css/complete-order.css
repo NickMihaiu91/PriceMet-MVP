@@ -1,0 +1,337 @@
+@font-face {
+    font-family: 'gotham';
+    src: url('../fonts/gotham/GothamLight.eot');
+    src: url('../fonts/gotham/GothamLight.eot?#iefix') format('embedded-opentype'), url('../fonts/gotham/GothamLight.woff') format('woff'), url('../fonts/gotham/GothamLight.ttf') format('truetype'), url('../fonts/gotham/GothamLight.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ddd;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.loader-inner.line-scale-pulse-out > div {
+    background-color: #298DBA;
+}
+
+header .logo {
+    width: 50%;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+header .navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    min-height: 70px;
+    font-family: gotham;
+}
+
+    header .navbar ul.navbar-nav {
+        margin-top: 10px;
+    }
+
+        header .navbar ul.navbar-nav li a {
+            font-size: 16px;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+
+            header .navbar ul.navbar-nav li a:hover, header .navbar ul.navbar-nav li a:focus {
+                background-color: rgba(96, 133, 181, 0.5);
+            }
+
+.panel.complete-order-panel {
+    border-color: #BCB6AF;
+}
+
+.panel .panel-heading {
+    color: #2F2E2D;
+    background-color: #f5f5f5;
+    border-color: #BCB6AF;
+}
+
+.panel .panel-footer {
+    border-top: 1px solid #BCB6AF;
+}
+
+section {
+    min-height: 100%;
+    width: 100%;
+}
+
+.complete-order .container {
+    margin-top: 100px;
+}
+
+.complete-order .x-symbol-container {
+    padding-top: 5px;
+}
+
+.complete-order .panel-footer h4 {
+    margin-top: 15px;
+}
+
+.complete-order .panel-body .offer-description {
+    font-family: 'Droid Serif', serif;
+}
+
+.complete-order .btn {
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: #65AF68;
+}
+
+    .complete-order .btn:hover {
+        background-color: rgba(101, 175, 104, 0.9);
+    }
+
+.complete-order .terms-conditions-links {
+    font-size: 16px;
+}
+
+    .complete-order .terms-conditions-links a {
+        cursor: pointer;
+    }
+
+.order-faq {
+    margin-top: 40px;
+}
+
+    .order-faq h3 {
+        padding-left: 15px;
+    }
+
+    .order-faq .fa-chevron-right {
+        margin-right: 5px;
+    }
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+    footer .link-container {
+        margin-top: 30px;
+    }
+
+        footer .link-container ul {
+            list-style: none outside none;
+            padding-left: 0;
+            color: white;
+        }
+
+            footer .link-container ul a {
+                color: white;
+                cursor: pointer;
+            }
+
+    footer .social h4 {
+        font-weight: 600;
+    }
+
+    footer p {
+        text-align: center;
+        font-size: 17px;
+        margin: 10px auto;
+    }
+
+    footer .footer-divider {
+        width: 50%;
+    }
+
+/*Modals*/
+
+.modal-header {
+    /*padding: 20px;*/
+}
+
+    .modal-header .close {
+        font-size: 30px;
+        margin-top: -10px;
+    }
+
+#completeOrderModalError .modal-body img {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.modal-body .text-container {
+    margin: 20px 30px 10px 30px;
+    text-align: justify;
+}
+
+#completeOrderModalError .modal-body h4 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.modal-body .input-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+    .modal-body .input-container .btn {
+        text-transform: none;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+    }
+
+    .modal-body .input-container input {
+        font-size: 20px;
+        text-align: center;
+        margin-right: 15px;
+    }
+
+.modal-body .email-error-msg-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.modal-body .alert-success {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.modal.text-modal .modal-header {
+    padding: 10px;
+}
+
+    .modal.text-modal .modal-header .close {
+        margin-top: -30px;
+        margin-right: 5px;
+    }
+
+
+/*Modified buttons*/
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+    .btn:focus, .btn:active:focus, .btn.active:focus {
+        outline: 0 none;
+    }
+
+.btn-primary {
+    background: #298DBA;
+    color: #ffffff;
+}
+
+    .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+        background: #33a6cc;
+    }
+
+    .btn-primary:active, .btn-primary.active {
+        background: #007299;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    input[type="text"], input[type="number"], input[type="email"], textarea, select {
+        font-size: 16px !important;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    header .logo {
+        width: auto;
+        height: 45px;
+        margin-top: -10px;
+    }
+
+    header .navbar {
+        min-height: 60px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+        header .navbar .navbar-collapse {
+            background-color: rgba(0, 0, 0, 0.55);
+        }
+
+        header .navbar .navbar-toggle {
+            background-color: #B3AEAE;
+            margin-top: 10px;
+        }
+
+            header .navbar .navbar-toggle .icon-bar {
+                background-color: rgb(41, 84, 126);
+            }
+
+    .complete-order .container {
+        margin-top: 60px;
+    }
+
+    .complete-order .terms-conditions-links {
+        text-align: left;
+    }
+
+    .mobile-order-view .btn {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .price-summary {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+        .price-summary .row {
+            margin-top: 10px;
+        }
+
+    .modal-body .input-container {
+        display: block;
+        text-align: center;
+    }
+
+        .modal-body .input-container input {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+}

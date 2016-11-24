@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="addMerchantApp">
+<head>
+    <title>
+        PriceMet Admin Add Merchant
+    </title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/admin-add-merchant.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img class="logo img-responsive" src="images/Price-Met_Transp-Background.png" />
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="nav-log-in" ng-click="logIn()">Log in</a></li>
+                        <li><a class="nav-sign-up" ng-click="signUp()">Sign up</a></li>
+                        <li><a class="nav-contact-us" ng-click="getInTouch()">Get in touch</a></li>
+                        <li><a class="nav-help" ng-click="needHelp()">Need help?</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="first-section">
+        <div class="container">
+            <form class="form-horizontal" role="form" ng-controller="FormCtrl" ng-submit="createMerchant()" name="merchantCreateForm" novalidate>
+                <fieldset>
+
+                    <!-- Form Name -->
+
+                    <h4><span class="_inline-two">TELL US</span> ABOUT <strong style="color:#F8A21D">YOURSELF</strong></h4>
+                    <div class="clearfix"></div>
+                    <br>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="First Name*" class="form-control" ng-model="merchant.merchantProfile.owner.firstName" name="firstName" required>
+                            <div class="error-container"
+                                 ng-show="merchantCreateForm.submitted && merchantCreateForm.firstName.$invalid">
+                                <small class="text-danger" ng-show="merchantCreateForm.firstName.$error.required">
+                                    First name is required.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="Last Name*" class="form-control" ng-model="merchant.merchantProfile.owner.lastName" name="lastName" required>
+                            <div class="error-container"
+                                 ng-show="merchantCreateForm.submitted && merchantCreateForm.lastName.$invalid">
+                                <small class="text-danger" ng-show="merchantCreateForm.lastName.$error.required">
+                                    Last name is required.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <input type="tel" placeholder="Phone Number*" class="form-control" ng-model="merchant.merchantProfile.owner.phone" name="phone" required>
+                            <div class="error-container"
+                                 ng-show="merchantCreateForm.submitted && merchantCreateForm.phone.$invalid">
+                                <small class="text-danger" ng-show="merchantCreateForm.phone.$error.required">
+                                    Phone number is required.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="email" placeholder="Email Address*" class="form-control" ng-model="merchant.email" name="email" required>
+                            <div class="error-container"
+                                 ng-show="merchantCreateForm.submitted && merchantCreateForm.email.$invalid">
+                                <small class="text-danger" ng-show="merchantCreateForm.email.$error.required">
+                                    Email address is required.
+                                </small>
+                                <small class="text-danger" ng-show="merchantCreateForm.email.$error.email">
+                                    That is not a valid email. Please input a valid email.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <input type="password" placeholder="Password*" class="form-control" ng-model="merchant.password" name="password" ng-minlength=4 required>
+                            <div class="error-container"
+                                 ng-show="merchantCreateForm.submitted && merchantCreateForm.password.$invalid">
+                                <small class="text-danger" ng-show="merchantCreateForm.password.$error.required">
+                                    Password is required.
+                                </small>
+                                <small class="text-danger" ng-show="merchantCreateForm.password.$error.minlength">
+                                    Password is required to be at least 4 characters long.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <h4><span class="_inline">TELL US</span> ABOUT <strong style="color:#298DBA">YOUR BUSINESS</strong></h4>
+                    <div class="clearfix"></div>
+                    <br>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" placeholder="Business name*" class="form-control" ng-model="merchant.merchantProfile.business.name" name="businessName" required>
+                            <div class="error-container"
+                                 ng-show="merchantCreateForm.submitted && merchantCreateForm.businessName.$invalid">
+                                <small class="text-danger" ng-show="merchantCreateForm.businessName.$error.required">
+                                    Business name is required.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" placeholder="Business Address*" class="form-control" ng-model="merchant.merchantProfile.business.address" name="businessAddress" required>
+                            <div class="error-container"
+                                 ng-show="merchantCreateForm.submitted && merchantCreateForm.businessAddress.$invalid">
+                                <small class="text-danger" ng-show="merchantCreateForm.businessAddress.$error.required">
+                                    Business address is required.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="City*" class="form-control" ng-model="merchant.merchantProfile.business.city" name="city" required>
+                            <div class="error-container"
+                                 ng-show="merchantCreateForm.submitted && merchantCreateForm.city.$invalid">
+                                <small class="text-danger" ng-show="merchantCreateForm.city.$error.required">
+                                    City is required.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="form-control" ng-model="merchant.merchantProfile.business.province" name="province" required>
+                                <option value="" disabled="" selected="">Province*</option>
+
+                                <option>Alberta</option>
+                                <option>British Columbia</option>
+                                <option>Manitoba</option>
+                                <option>New Brunswick</option>
+                                <option>Newfoundland and Labrador</option>
+                                <option>Nova Scotia</option>
+                                <option>Northwest Territories</option>
+                                <option>Nunavut</option>
+                                <option>Ontario</option>
+                                <option>Prince Edward Island</option>
+                                <option>Quebec</option>
+                                <option>Saskatchewan</option>
+                                <option>Yukon</option>
+
+                            </select>
+                            <div class="error-container"
+                                 ng-show="merchantCreateForm.submitted && merchantCreateForm.province.$invalid">
+                                <small class="text-danger" ng-show="merchantCreateForm.province.$error.required">
+                                    Province is required.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="Postal Code*" class="form-control" ng-model="merchant.merchantProfile.business.postalCode" name="postalCode" required>
+                            <div class="error-container"
+                                 ng-show="merchantCreateForm.submitted && merchantCreateForm.postalCode.$invalid">
+                                <small class="text-danger" ng-show="merchantCreateForm.postalCode.$error.required">
+                                    Postal code is required.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <select id="maxOption2" class="form-control" ng-model="merchant.merchantProfile.business.industry"  name="industry" required>
+                                <option value="" disabled="" selected="">Industry*</option>
+                                <option>E-commerce/online only</option>
+                                <option>Retail Store front</option>
+                                <option>Services</option>
+                                <option>Food &amp; Drink</option>
+                                <option>Health &amp; Beauty</option>
+                                <option>Sports &amp; Fitness</option>
+                                <option>Travel</option>
+                                <option>Entertainment</option>
+                            </select>
+                            <div class="error-container"
+                                 ng-show="merchantCreateForm.submitted && merchantCreateForm.industry.$invalid">
+                                <small class="text-danger" ng-show="merchantCreateForm.industry.$error.required">
+                                    Industry is required.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" placeholder="Phone Number*" class="form-control" ng-model="merchant.merchantProfile.business.phone" name="businessPhone" required>
+                            <div class="error-container"
+                                 ng-show="merchantCreateForm.submitted && merchantCreateForm.businessPhone.$invalid">
+                                <small class="text-danger" ng-show="merchantCreateForm.businessPhone.$error.required">
+                                    Phone number is required.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="col-sm-12">
+                            <textarea placeholder="What else do you want to tell us about your Business" class="form-control" ng-model="merchant.merchantProfile.business.otherInfo"></textarea>
+                        </div>
+                    </div>
+
+
+                    <h4><span class="_inline-two">YOUR</span> ONLINE  <strong style="color:#F8A21D">PRESENCE</strong></h4>
+                    <div class="clearfix"></div>
+                    <br>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="Website URL" class="form-control" ng-model="merchant.merchantProfile.online.website">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="Twitter URL" class="form-control" ng-model="merchant.merchantProfile.online.twitter">
+                        </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="Facebook URL" class="form-control" ng-model="merchant.merchantProfile.online.facebook">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="Yelp URL" class="form-control" ng-model="merchant.merchantProfile.online.yelp">
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div><br>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="text-center">
+                                {{serverMessage}}
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-lg btn-success">Create account</button><br>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+    <!-- jQuery minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+
+    <script src="js/angular/services/authentication-service.js"></script>
+    <script src="js/angular/services/admin-service.js"></script>
+    <script src="js/angular/angular-admin-add-merchant.js"></script>
+
+    <!--Google analytics-->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-65114946-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>

@@ -45,3 +45,13 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# VS + NTVS
+.ntvs_analysis.dat
+bin
+
+#custom
+generated_vouchers
+node_modules
+obj
+config/secrets.js

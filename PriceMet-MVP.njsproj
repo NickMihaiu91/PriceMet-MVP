@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{d5beef06-9e9b-4f54-b973-8ead9f7a7543}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile>app.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Compile Include="controllers\offer.js" />
+    <Compile Include="controllers\order.js" />
+    <Compile Include="controllers\pdf.js" />
+    <Compile Include="controllers\voucher.js" />
+    <Compile Include="controllers\yelpApi.js" />
+    <Compile Include="models\Order.js" />
+    <Compile Include="models\Voucher.js" />
+    <Compile Include="public\js\angular-google-maps-native.min.js" />
+    <Compile Include="public\js\angular\angular-admin-add-merchant.js" />
+    <Compile Include="public\js\angular\angular-admin-login.js" />
+    <Compile Include="public\js\angular\angular-admin-options.js" />
+    <Compile Include="public\js\angular\angular-complete-order.js" />
+    <Compile Include="public\js\angular\angular-index.js" />
+    <Compile Include="public\js\angular\angular-forgot-password.js" />
+    <Compile Include="public\js\angular\angular-merchant-dashboard.js" />
+    <Compile Include="public\js\angular\angular-reset-password.js" />
+    <Compile Include="public\js\angular\angular-merchant-login.js" />
+    <Compile Include="public\js\angular\angular-thank-you.js" />
+    <Compile Include="public\js\angular\angular-voucher-check.js" />
+    <Compile Include="public\js\angular\angular-voucher-generate.js" />
+    <Compile Include="public\js\angular\angular-voucher-redeem.js" />
+    <Compile Include="public\js\angular\partials-controllers\ouibounce-modal.js" />
+    <Compile Include="public\js\angular\services\admin-service.js" />
+    <Compile Include="public\js\angular\angular-offer-details.js" />
+    <Compile Include="public\js\angular\services\authentication-service.js" />
+    <Compile Include="public\js\angular\services\merchants-looking-at-request-service.js" />
+    <Compile Include="public\js\angular\services\offers-service.js" />
+    <Compile Include="public\js\angular\services\order-service.js" />
+    <Compile Include="public\js\angular\services\toastr-service.js" />
+    <Compile Include="public\js\angular\services\voucher-service.js" />
+    <Compile Include="public\js\angular\services\yelp-service.js" />
+    <Compile Include="public\js\bootstrap-datepicker.min.js" />
+    <Compile Include="public\js\calc.min.js" />
+    <Compile Include="public\js\classie.js" />
+    <Compile Include="public\js\index.js" />
+    <Compile Include="public\js\jquery.appear.js" />
+    <Compile Include="public\js\jquery.scrollintoview.min.js" />
+    <Compile Include="public\js\please-wait.min.js" />
+    <Compile Include="public\js\qrcode.min.js" />
+    <Compile Include="public\js\rrssb.js" />
+    <Compile Include="public\js\select-fx.js" />
+    <Compile Include="public\js\sweetalert.min.js" />
+    <Compile Include="public\js\sweetalert2.min.js" />
+    <Compile Include="routes\offerRouting.js" />
+    <Compile Include="routes\orderRouting.js" />
+    <Compile Include="routes\routeManager.js" />
+    <Compile Include="routes\userRouting.js" />
+    <Compile Include="routes\voucherRouting.js" />
+    <Compile Include="routes\yelpApiRouting.js" />
+    <Content Include="package.json" />
+    <Content Include="public\admin-add-merchant.html" />
+    <Content Include="public\admin-login.html" />
+    <Content Include="public\admin-options.html" />
+    <Content Include="public\complete-order.html" />
+    <Content Include="public\css\admin-add-merchant.css" />
+    <Content Include="public\css\bootstrap-datepicker3.min.css" />
+    <Content Include="public\css\complete-order.css" />
+    <Content Include="public\css\custom-select.css" />
+    <Content Include="public\css\header-input-button.css" />
+    <Content Include="public\css\loaders.min.css" />
+    <Content Include="public\css\merchant-dashboard.css" />
+    <Content Include="public\css\merchant-login.css" />
+    <Content Include="public\css\offer-details.css" />
+    <Content Include="public\css\partials\ouibounce-modal.css" />
+    <Content Include="public\css\please-wait.css" />
+    <Content Include="public\css\rrssb.css" />
+    <Content Include="public\css\social-buttons.css" />
+    <Content Include="public\css\style.css" />
+    <Content Include="public\css\sweetalert.css" />
+    <Content Include="public\css\sweetalert2.css" />
+    <Content Include="public\css\thank-you.css" />
+    <Content Include="public\css\voucher-generate.css" />
+    <Content Include="public\css\voucher-redeem.css" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\fonts\gotham\GothamLight.eot" />
+    <Content Include="public\fonts\gotham\GothamLight.otf" />
+    <Content Include="public\fonts\gotham\GothamLight.svg" />
+    <Content Include="public\fonts\gotham\GothamLight.ttf" />
+    <Content Include="public\fonts\gotham\GothamLight.woff" />
+    <Content Include="public\fonts\icomoon\icomoon.eot" />
+    <Content Include="public\fonts\icomoon\icomoon.ttf" />
+    <Content Include="public\fonts\icomoon\icomoon.woff" />
+    <Content Include="public\forgot-password.html" />
+    <Content Include="public\images\air-conditioning-original.jpg" />
+    <Content Include="public\images\air-conditioning.jpg" />
+    <Content Include="public\images\air-conditioning_low.jpg" />
+    <Content Include="public\images\auto-repair-original.jpg" />
+    <Content Include="public\images\auto-repair.jpg" />
+    <Content Include="public\images\auto-repair_low.jpg" />
+    <Content Include="public\images\auto-repair_medium.jpg" />
+    <Content Include="public\images\beauty-spa-original.jpg" />
+    <Content Include="public\images\beauty-spa.jpg" />
+    <Content Include="public\images\beauty-spa_low.jpg" />
+    <Content Include="public\images\beauty-spa_medium.jpg" />
+    <Content Include="public\images\clubs-bars-original.jpg" />
+    <Content Include="public\images\clubs-bars.jpg" />
+    <Content Include="public\images\clubs-bars_low.jpg" />
+    <Content Include="public\images\clubs-bars_medium.jpg" />
+    <Content Include="public\images\error-round.png" />
+    <Content Include="public\images\header\People-Eating-in-Restaurant-2_crop3.jpg" />
+    <Content Include="public\images\header\People-Eating-in-Restaurant_white-background_bottom-extended_v3.jpg" />
+    <Content Include="public\images\header\People-Eating-in-Restaurant_with-extended-top.jpg" />
+    <Content Include="public\images\header\People-Eating-in-Restaurant_with-extended-top_v2.jpg" />
+    <Content Include="public\images\header\PriceMet-Home-Page_-Health-and-Beauty_1.jpg" />
+    <Content Include="public\images\header\R45.jpg" />
+    <Content Include="public\images\header\RC16_S.jpg" />
+    <Content Include="public\images\header\RC9_S.jpg" />
+    <Content Include="public\images\header\spa-decor5_crop.jpg" />
+    <Content Include="public\images\header\spa-relaxation3.jpg" />
+    <Content Include="public\images\header\spa11_crop.jpg" />
+    <Content Include="public\images\header\spa8_crop.jpg" />
+    <Content Include="public\images\header\spa9_crop.jpg" />
+    <Content Include="public\images\header\SPC14.jpg" />
+    <Content Include="public\images\header\SPC23.jpg" />
+    <Content Include="public\images\header\SPC6.jpg" />
+    <Content Include="public\images\offers\beauty\B1.jpg" />
+    <Content Include="public\images\offers\beauty\B10.jpg" />
+    <Content Include="public\images\offers\beauty\B11.jpg" />
+    <Content Include="public\images\offers\beauty\B12.jpg" />
+    <Content Include="public\images\offers\beauty\B13.jpg" />
+    <Content Include="public\images\offers\beauty\B14.jpg" />
+    <Content Include="public\images\offers\beauty\B15.jpg" />
+    <Content Include="public\images\offers\beauty\B16.jpg" />
+    <Content Include="public\images\offers\beauty\B17.jpg" />
+    <Content Include="public\images\offers\beauty\B18.jpg" />
+    <Content Include="public\images\offers\beauty\B19.jpg" />
+    <Content Include="public\images\offers\beauty\B2.jpg" />
+    <Content Include="public\images\offers\beauty\B20.jpg" />
+    <Content Include="public\images\offers\beauty\B21.jpg" />
+    <Content Include="public\images\offers\beauty\B22.jpg" />
+    <Content Include="public\images\offers\beauty\B23.jpg" />
+    <Content Include="public\images\offers\beauty\B24.jpg" />
+    <Content Include="public\images\offers\beauty\B25.jpg" />
+    <Content Include="public\images\offers\beauty\B26.jpg" />
+    <Content Include="public\images\offers\beauty\B27.jpg" />
+    <Content Include="public\images\offers\beauty\B28.jpg" />
+    <Content Include="public\images\offers\beauty\B29.jpg" />
+    <Content Include="public\images\offers\beauty\B3.jpg" />
+    <Content Include="public\images\offers\beauty\B30.jpg" />
+    <Content Include="public\images\offers\beauty\B31.jpg" />
+    <Content Include="public\images\offers\beauty\B32.jpg" />
+    <Content Include="public\images\offers\beauty\B33.jpg" />
+    <Content Include="public\images\offers\beauty\B34.jpg" />
+    <Content Include="public\images\offers\beauty\B35.jpg" />
+    <Content Include="public\images\offers\beauty\B36.jpg" />
+    <Content Include="public\images\offers\beauty\B37.jpg" />
+    <Content Include="public\images\offers\beauty\B38.jpg" />
+    <Content Include="public\images\offers\beauty\B39.jpg" />
+    <Content Include="public\images\offers\beauty\B4.jpg" />
+    <Content Include="public\images\offers\beauty\B40.jpg" />
+    <Content Include="public\images\offers\beauty\B41.jpg" />
+    <Content Include="public\images\offers\beauty\B42.jpg" />
+    <Content Include="public\images\offers\beauty\B43.jpg" />
+    <Content Include="public\images\offers\beauty\B44.jpg" />
+    <Content Include="public\images\offers\beauty\B45.jpg" />
+    <Content Include="public\images\offers\beauty\B46.jpg" />
+    <Content Include="public\images\offers\beauty\B47.jpg" />
+    <Content Include="public\images\offers\beauty\B48.jpg" />
+    <Content Include="public\images\offers\beauty\B49.jpg" />
+    <Content Include="public\images\offers\beauty\B5.jpg" />
+    <Content Include="public\images\offers\beauty\B50.jpg" />
+    <Content Include="public\images\offers\beauty\B51.jpg" />
+    <Content Include="public\images\offers\beauty\B52.jpg" />
+    <Content Include="public\images\offers\beauty\B53.jpg" />
+    <Content Include="public\images\offers\beauty\B54.jpg" />
+    <Content Include="public\images\offers\beauty\B55.jpg" />
+    <Content Include="public\images\offers\beauty\B56.jpg" />
+    <Content Include="public\images\offers\beauty\B57.jpg" />
+    <Content Include="public\images\offers\beauty\B58.jpg" />
+    <Content Include="public\images\offers\beauty\B59.jpg" />
+    <Content Include="public\images\offers\beauty\B6.jpg" />
+    <Content Include="public\images\offers\beauty\B60.jpg" />
+    <Content Include="public\images\offers\beauty\B61.jpg" />
+    <Content Include="public\images\offers\beauty\B62.jpg" />
+    <Content Include="public\images\offers\beauty\B63.jpg" />
+    <Content Include="public\images\offers\beauty\B64.jpg" />
+    <Content Include="public\images\offers\beauty\B65.jpg" />
+    <Content Include="public\images\offers\beauty\B66.jpg" />
+    <Content Include="public\images\offers\beauty\B67.jpg" />
+    <Content Include="public\images\offers\beauty\B68.jpg" />
+    <Content Include="public\images\offers\beauty\B69.jpg" />
+    <Content Include="public\images\offers\beauty\B7.jpg" />
+    <Content Include="public\images\offers\beauty\B70.jpg" />
+    <Content Include="public\images\offers\beauty\B71.jpg" />
+    <Content Include="public\images\offers\beauty\B72.jpg" />
+    <Content Include="public\images\offers\beauty\B73.jpg" />
+    <Content Include="public\images\offers\beauty\B74.jpg" />
+    <Content Include="public\images\offers\beauty\B75.jpg" />
+    <Content Include="public\images\offers\beauty\B76.jpg" />
+    <Content Include="public\images\offers\beauty\B77.jpg" />
+    <Content Include="public\images\offers\beauty\B78.jpg" />
+    <Content Include="public\images\offers\beauty\B79.jpg" />
+    <Content Include="public\images\offers\beauty\B8.jpg" />
+    <Content Include="public\images\offers\beauty\B9.jpg" />
+    <Content Include="public\images\offers\restaurant\R1.jpg" />
+    <Content Include="public\images\offers\restaurant\R10.jpg" />
+    <Content Include="public\images\offers\restaurant\R11.jpg" />
+    <Content Include="public\images\offers\restaurant\R12.jpg" />
+    <Content Include="public\images\offers\restaurant\R13.jpg" />
+    <Content Include="public\images\offers\restaurant\R14.jpg" />
+    <Content Include="public\images\offers\restaurant\R15.jpg" />
+    <Content Include="public\images\offers\restaurant\R16.jpg" />
+    <Content Include="public\images\offers\restaurant\R17.jpg" />
+    <Content Include="public\images\offers\restaurant\R18.jpg" />
+    <Content Include="public\images\offers\restaurant\R19.jpg" />
+    <Content Include="public\images\offers\restaurant\R2.jpg" />
+    <Content Include="public\images\offers\restaurant\R20.jpg" />
+    <Content Include="public\images\offers\restaurant\R21.jpg" />
+    <Content Include="public\images\offers\restaurant\R22.jpg" />
+    <Content Include="public\images\offers\restaurant\R23.jpg" />
+    <Content Include="public\images\offers\restaurant\R24.jpg" />
+    <Content Include="public\images\offers\restaurant\R25.jpg" />
+    <Content Include="public\images\offers\restaurant\R26.jpg" />
+    <Content Include="public\images\offers\restaurant\R27.jpg" />
+    <Content Include="public\images\offers\restaurant\R28.jpg" />
+    <Content Include="public\images\offers\restaurant\R29.jpg" />
+    <Content Include="public\images\offers\restaurant\R3.jpg" />
+    <Content Include="public\images\offers\restaurant\R30.jpg" />
+    <Content Include="public\images\offers\restaurant\R31.jpg" />
+    <Content Include="public\images\offers\restaurant\R32.jpg" />
+    <Content Include="public\images\offers\restaurant\R33.jpg" />
+    <Content Include="public\images\offers\restaurant\R34.jpg" />
+    <Content Include="public\images\offers\restaurant\R35.jpg" />
+    <Content Include="public\images\offers\restaurant\R36.jpg" />
+    <Content Include="public\images\offers\restaurant\R37.jpg" />
+    <Content Include="public\images\offers\restaurant\R38.jpg" />
+    <Content Include="public\images\offers\restaurant\R39.jpg" />
+    <Content Include="public\images\offers\restaurant\R4.jpg" />
+    <Content Include="public\images\offers\restaurant\R40.jpg" />
+    <Content Include="public\images\offers\restaurant\R41.jpg" />
+    <Content Include="public\images\offers\restaurant\R42.jpg" />
+    <Content Include="public\images\offers\restaurant\R43.jpg" />
+    <Content Include="public\images\offers\restaurant\R44.jpg" />
+    <Content Include="public\images\offers\restaurant\R45.jpg" />
+    <Content Include="public\images\offers\restaurant\R46.jpg" />
+    <Content Include="public\images\offers\restaurant\R47.jpg" />
+    <Content Include="public\images\offers\restaurant\R48.jpg" />
+    <Content Include="public\images\offers\restaurant\R49.jpg" />
+    <Content Include="public\images\offers\restaurant\R5.jpg" />
+    <Content Include="public\images\offers\restaurant\R50.jpg" />
+    <Content Include="public\images\offers\restaurant\R51.jpg" />
+    <Content Include="public\images\offers\restaurant\R52.jpg" />
+    <Content Include="public\images\offers\restaurant\R53.jpg" />
+    <Content Include="public\images\offers\restaurant\R54.jpg" />
+    <Content Include="public\images\offers\restaurant\R55.jpg" />
+    <Content Include="public\images\offers\restaurant\R56.jpg" />
+    <Content Include="public\images\offers\restaurant\R57.jpg" />
+    <Content Include="public\images\offers\restaurant\R58.jpg" />
+    <Content Include="public\images\offers\restaurant\R59.jpg" />
+    <Content Include="public\images\offers\restaurant\R6.jpg" />
+    <Content Include="public\images\offers\restaurant\R60.jpg" />
+    <Content Include="public\images\offers\restaurant\R61.jpg" />
+    <Content Include="public\images\offers\restaurant\R62.jpg" />
+    <Content Include="public\images\offers\restaurant\R63.jpg" />
+    <Content Include="public\images\offers\restaurant\R64.jpg" />
+    <Content Include="public\images\offers\restaurant\R65.jpg" />
+    <Content Include="public\images\offers\restaurant\R66.jpg" />
+    <Content Include="public\images\offers\restaurant\R67.jpg" />
+    <Content Include="public\images\offers\restaurant\R68.jpg" />
+    <Content Include="public\images\offers\restaurant\R69.jpg" />
+    <Content Include="public\images\offers\restaurant\R7.jpg" />
+    <Content Include="public\images\offers\restaurant\R70.jpg" />
+    <Content Include="public\images\offers\restaurant\R71.jpg" />
+    <Content Include="public\images\offers\restaurant\R72.jpg" />
+    <Content Include="public\images\offers\restaurant\R73.jpg" />
+    <Content Include="public\images\offers\restaurant\R74.jpg" />
+    <Content Include="public\images\offers\restaurant\R75.jpg" />
+    <Content Include="public\images\offers\restaurant\R76.jpg" />
+    <Content Include="public\images\offers\restaurant\R77.jpg" />
+    <Content Include="public\images\offers\restaurant\R78.jpg" />
+    <Content Include="public\images\offers\restaurant\R79.jpg" />
+    <Content Include="public\images\offers\restaurant\R8.jpg" />
+    <Content Include="public\images\offers\restaurant\R9.jpg" />
+    <Content Include="public\images\plumbing-original.jpg" />
+    <Content Include="public\images\plumbing.jpg" />
+    <Content Include="public\images\plumbing_low.jpg" />
+    <Content Include="public\images\Price-Met_Transp-Background.png" />
+    <Content Include="public\images\PriceMet payments-methods.png" />
+    <Content Include="public\images\PriceMet_How-it-works-1.png" />
+    <Content Include="public\images\PriceMet_How-it-works-2.png" />
+    <Content Include="public\images\PriceMet_How-it-works-3.png" />
+    <Content Include="public\images\restaurant-original.jpg" />
+    <Content Include="public\images\restaurant.jpg" />
+    <Content Include="public\images\restaurant_low.jpg" />
+    <Content Include="public\images\sad-puppy.jpg" />
+    <Content Include="public\images\sandwich.jpg" />
+    <Content Include="public\images\thank-you.jpg" />
+    <Content Include="public\images\vancouver_skyline_281-original.jpg" />
+    <Content Include="public\images\vancouver_skyline_281.jpg" />
+    <Content Include="public\images\vancouver_skyline_281_low.jpg" />
+    <Content Include="public\images\vancouver_skyline_281_medium.jpg" />
+    <Content Include="public\images\Why-PriceMet_Health-and-Beauty.png" />
+    <Content Include="public\images\Why-PriceMet_Restaurants.png" />
+    <Content Include="public\index.html" />
+    <Content Include="public\merchant-dashboard.html" />
+    <Content Include="public\merchant-login.html" />
+    <Content Include="public\offer-details.html" />
+    <Content Include="public\partials\ouibounce-modal.html" />
+    <Content Include="public\reset-password.html" />
+    <Content Include="public\thank-you.html" />
+    <Content Include="public\voucher-check.html" />
+    <Content Include="public\voucher-generate.html" />
+    <Content Include="public\voucher-redeem.html" />
+    <Content Include="README.md" />
+    <Compile Include="app.js" />
+    <Compile Include="config\passport.js" />
+    <Compile Include="config\secrets.js" />
+    <Compile Include="controllers\api.js" />
+    <Compile Include="controllers\user.js" />
+    <Compile Include="models\Offer.js" />
+    <Compile Include="models\User.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="config" />
+    <Folder Include="controllers" />
+    <Folder Include="models" />
+    <Folder Include="public\css\partials\" />
+    <Folder Include="public\js\angular\partials-controllers\" />
+    <Folder Include="public\partials\" />
+    <Folder Include="routes\" />
+    <Folder Include="public" />
+    <Folder Include="public\css\" />
+    <Folder Include="public\fonts\" />
+    <Folder Include="public\fonts\gotham\" />
+    <Folder Include="public\fonts\icomoon\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\images\header\" />
+    <Folder Include="public\images\offers\" />
+    <Folder Include="public\images\offers\beauty\" />
+    <Folder Include="public\images\offers\restaurant\" />
+    <Folder Include="public\js\" />
+    <Folder Include="public\js\angular\" />
+    <Folder Include="public\js\angular\services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,48 @@
+﻿<link href="../css/partials/ouibounce-modal.css" rel="stylesheet" />
+
+<div class="modal fade" id="ouibounce-modal" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-center">Wait a sec</h3>
+            </div>
+
+            <div class="modal-body">
+                <h4 ng-hide="sentFeedback">Before you close this page PLEASE, PLEASE let us know what happened.<b> This will help us improve your experience and it will only take 5 seconds.</b></h4>
+
+                <div class="responses col-md-6 col-xs-6" ng-hide="sentFeedback">
+                    <div class="radio" ng-repeat="option in optionlist">
+                        <label ng-click="sendFeedback(option, $event)">
+                            <input type="radio" name="optionsRadios">
+                            {{ option }}
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label ng-click="otherOptionClicked()">
+                            <input type="radio" name="optionsRadios" ng-value="false">
+                            Other
+                        </label>
+                    </div>
+
+                    <div ng-show="otherOptionSelected" class="other-option-text-input-container">
+                        <textarea ng-model="otherOptionText" placeholder="Type here..."></textarea>
+                        <button class="btn btn-primary green btn-get-offers" ng-click="sendTextFeedback(otherOptionText)">Send</button>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xs-6" ng-show="sentFeedback">
+                    <h3>Thank you!</h3>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                    <img class="img-responsive" src="../images/funny-question-mark.png" />
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <p class="text-center" data-dismiss="modal" ng-hide="sentFeedback" ng-click="noHelp()">No, I don't want to help</p>
+                <p class="text-center" data-dismiss="modal" ng-show="sentFeedback">Close</p>
+            </div>
+        </div>
+    </div>
+</div>
