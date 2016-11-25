@@ -25,8 +25,20 @@ PriceMet is a “name your own price” site for restaurants, spas and other kin
 
 ##Roles
  - Client
+   - Requests offers
+   - Views offer details
+   - Buys offer using credit card(stripe)
+   - Gets email with generated vouchers
+   - No account neeeded
+   
  - Merchant
+   - Login with email and password
+   - Dashboard - views offers and vouchers sold
+   - Redeems vouchers
+   
  - Admin
+   - Login with email and password
+   - Adds merchants to system
 
 - Flow -> find offer, pay, redeem
 - Merchant part -> redeem
