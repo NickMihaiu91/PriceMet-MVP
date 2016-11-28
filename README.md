@@ -40,7 +40,7 @@ PriceMet is a “name your own price” site for restaurants, spas and other kin
    - Login with email and password
    - Adds merchants to system
 
-##Flow -> find offer, pay, redeem
+##Flow
 
 ###Client
 
@@ -88,7 +88,6 @@ PriceMet is a “name your own price” site for restaurants, spas and other kin
 2. Add new merchant
 ![Add new merchant](screenshots/admin-add-new-merchant.JPG?raw=true "Add new merchant")
 
----
 
 ##Mobile optimized experience
 
